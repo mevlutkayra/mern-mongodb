@@ -11,8 +11,8 @@
     "server": "nodemon server.js",
     "start": "node server.js",
     "start-client": "npm start --prefix client" ,
-    "develop": "concurrently -n 'server,client' -c 'blue-yellow' \"npm run server\"    \"npm run start-client\"" ,
-    "hereku-postbuild": "cd client && npm install --prefix client && nmp run build --prefix client"
+    "develop": "concurrently -n 'server,client' -c 'red,blue' \"npm run server\"    \"npm run start-client\"" ,
+    "heroku-postbuild": "npm install --prefix client && npm run build --prefix client"
   },
   "repository": {
     "type": "git",
